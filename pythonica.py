@@ -71,7 +71,7 @@ def _mathematica_str_python(s):
             val = float(s)
         except ValueError:
             try:
-                val = float(s.replace('*10^','e'))
+                val = float(s.replace('*10^','e').replace('*^','e')
             except ValueError:
                 val = None
     # Some sort of Number, so return it NEED TO ADD COMPLEX and Rational
